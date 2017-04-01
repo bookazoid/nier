@@ -57,6 +57,7 @@
 			var mesh, zmesh, geometry;
 
 			var mouseX = 0, mouseY = 0;
+			var loaded = 0;
 			var drag = false;
 
 			var windowHalfX = window.innerWidth / 2;
@@ -198,7 +199,7 @@
 
 				var loader = new THREE.JSONLoader();
 				// var callbackMale = function ( geometry, materials ) { createScene( geometry, materials, 90, FLOOR, 50, 105 ) };
-				var callbackMale = function ( geometry, materials ) { createScene( geometry, materials, 0, 0, 0, 0 ) };
+				var callbackMale = function ( geometry, materials ) { loaded++;createScene( geometry, materials, 0, 0, 0, 0 ) };
 
 				// loader.load( "./nier-0.js", callbackMale );
 
@@ -339,7 +340,7 @@
 				// camera.position.x += ( mouseX - camera.position.x ) * .05;
 				// camera.position.y += ( - mouseY - camera.position.y ) * .05;
 
-				if(drag){
+				if(drag && loaded>=15){
 					for(i=0;i<meshes.length;i++){
 						meshes[i].rotation.x -= ( sMouseY - mouseY) * .0005
 						meshes[i].rotation.y -= ( sMouseX - mouseX) * .0005
