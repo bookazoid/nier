@@ -17,14 +17,11 @@
     "materials": [	{
 	"colorDiffuse" : [0.9, 0.9, 0.9],
 	"colorSpecular" : [0.165, 0.165, 0.165],
-	"mapDiffuse" : "pl0000_2.dds",
+    "mapDiffuse" : "pl0000_2.dds",
     "mapNormal" : "pl0000_5.dds",
-	"illumination" : 2,
-	"opticalDensity" : 1.0,
-	"specularCoef" : 154.901961,
-	"opacity" : 1.0,
 	"depthTest": true,
-	"depthWrite": true
+	"depthWrite": true,
+    "shading": "standard"
 	}
 	],  
 
